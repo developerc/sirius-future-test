@@ -1,0 +1,21 @@
+//инструкцию по развертыванию NextJS приложения с TypeScript и React брал здесь https://www.youtube.com/watch?v=y0W2TD1EUXE
+//Создаем приложение NextJS. В консоли переходим в папку проектов.
+npx create-next-app
+//отвечаем на вопрос как называется новое приложение
+sirius-future-test
+//переходим в папку приложения, устанавливаем typescript, react
+cd sirius-future-test
+npm i -D typescript @types/react
+//создаем файл tsconfig.json
+touch tsconfig.json
+//открываем Visual Studio Code, в ней открываем консоль, в консоли
+npm run dev
+//после этого заполнится файл tsconfig.json
+//в папке pages переименовываем файлы: index.js в index.tsx, _app.js в _app.tsx, после этого удаляем папку api с содержимым
+//перезапустим 
+npm run dev
+//теперь можно запускать в браузере
+http://localhost:3000
+//получим стартовую страницу
+//устанавливаем emotion/styled
+npm i @emotion/styled @emotion/react
