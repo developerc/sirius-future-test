@@ -1,6 +1,7 @@
 import React, {useEffect, useState, FunctionComponent} from 'react';
 import styled from '@emotion/styled'
 //import PlusMinusButton from '../src/PlusMinusButton';
+import {PMButton} from '../components/PlusMinusButton';
 
 //const [speedVal, setSpeedVal] = useState("");
 type PlusMinus = {
@@ -90,7 +91,7 @@ export default function Play(){
     type: "text";
     border-radius: 7px 7px 7px 7px;
    `
-   
+  /* 
    const PlusMinusButton = styled.button`
     padding: 5px;
     color: black;
@@ -102,7 +103,7 @@ export default function Play(){
     width: 40px;
     line-height: 10px;
    `
-  
+  */
    const ButtonDiv = styled.div`
    display: flex;
    justify-content: center;
@@ -197,9 +198,14 @@ export default function Play(){
                       </TextDiv>
                         
                           <ButtonDiv>
-                          <PlusMinusButton onClick = {clickPlusButton}>+</PlusMinusButton>
+                          {/* <PlusMinusButton onClick = {clickPlusButton}>+</PlusMinusButton> */}
+                          {/* <PlusMinusButton dfltVal = "+"></PlusMinusButton> */}
+                          {/* <PMButton dfltVal = "+"></PMButton> */}
+                          <PMButton dfltVal="+"></PMButton>
                           &nbsp;
-                          <PlusMinusButton>&minus;</PlusMinusButton>
+                          {/* <PlusMinusButton>&minus;</PlusMinusButton> */}
+                          {/* <PMButton dfltVal = "-"></PMButton> */}
+                          <PMButton dfltVal="&minus;"></PMButton>
                           </ButtonDiv>
                           
                     </MainDiv>                    
