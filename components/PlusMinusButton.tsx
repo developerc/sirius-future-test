@@ -27,9 +27,7 @@ const getInput = () => {
 
 export const PMButton: FunctionComponent<InputProps> = ({dfltVal}) => {
     const [inputNum, setInputNum] = useState(0);  //это hook для получения числа из поля ввода
-    const increase = (): void => {
-        setInputNum( Number(getInput()) );        
-    };
+
     const changeInput = (sign): void => {
         if(sign === "+"){
             setInputNum( Number(getInput()) + 1);
