@@ -197,15 +197,10 @@ export default function Play(){
                         </ParagraphSpeed>
                       </TextDiv>
                         
-                          <ButtonDiv>
-                          {/* <PlusMinusButton onClick = {clickPlusButton}>+</PlusMinusButton> */}
-                          {/* <PlusMinusButton dfltVal = "+"></PlusMinusButton> */}
-                          {/* <PMButton dfltVal = "+"></PMButton> */}
-                          <PMButton dfltVal="+"></PMButton>
-                          &nbsp;
-                          {/* <PlusMinusButton>&minus;</PlusMinusButton> */}
-                          {/* <PMButton dfltVal = "-"></PMButton> */}
-                          <PMButton dfltVal="&minus;"></PMButton>
+                          <ButtonDiv>                        
+                            <PMButton dfltVal="+"></PMButton>
+                            &nbsp;                          
+                            <PMButton dfltVal="&minus;"></PMButton>
                           </ButtonDiv>
                           
                     </MainDiv>                    

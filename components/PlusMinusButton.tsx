@@ -15,41 +15,38 @@ const PlusMinusButton = styled.button`
    type InputProps = {
     dfltVal: string
 }
-type Props = {
-    sign: string;
+
+const setInput = (val: number) => {
+    console.log('inputNum = ' + val);
+    (document.getElementById("inputSpeed") as HTMLInputElement).value = String(val);
 }
 
-const clickButton = (sign: string) => {
-    //const [inputNum, setInputNum] = useState(0);  //это hook для получения числа из поля ввода
-    
-    let inputVal = (document.getElementById("inputSpeed") as HTMLInputElement).value;
-    if(sign === "+"){
-        console.log('sign = plus ' + inputVal);
-    } else {
-        console.log('sign = minus');
-    }
-    
-};
+const getInput = () => {
+    return (document.getElementById("inputSpeed") as HTMLInputElement).value;
+}
 
 export const PMButton: FunctionComponent<InputProps> = ({dfltVal}) => {
     const [inputNum, setInputNum] = useState(0);  //это hook для получения числа из поля ввода
     const increase = (): void => {
-        setInputNum( inputNum + 1 );
-        
-        //clickButton(dfltVal);
+        setInputNum( Number(getInput()) );        
     };
-    const decrease = (): void => {
-        setInputNum( (prevNum) => prevNum - 1);
+    const changeInput = (sign): void => {
+        if(sign === "+"){
+            setInputNum( Number(getInput()) + 1);
+        } else {
+            if(Number(getInput()) > 0) {
+                setInputNum( Number(getInput()) - 1);
+            }
+        }
     };
     
      useEffect(() => {
-         clickButton(dfltVal);
+        setInput(inputNum);
      });
 
 return (
-<aside>
-<PlusMinusButton onClick = {() => increase()}>{dfltVal}</PlusMinusButton>
-{/* <PlusMinusButton onClick = {() => clickButton(dfltVal)}>{dfltVal}</PlusMinusButton> */}
-</aside>
+<>
+<PlusMinusButton onClick = {() => changeInput(dfltVal)}>{dfltVal}</PlusMinusButton>
+</>
 );
 }
