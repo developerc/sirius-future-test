@@ -2,6 +2,7 @@ import React, {useEffect, useState, FunctionComponent} from 'react';
 import styled from '@emotion/styled'
 //import PlusMinusButton from '../src/PlusMinusButton';
 import {PMButton} from '../components/PlusMinusButton';
+import {Slider} from '../components/Slider';
 
 //const [speedVal, setSpeedVal] = useState("");
 type PlusMinus = {
@@ -157,7 +158,7 @@ export default function Play(){
                         </TableMain>
                     </TableDiv>
                     <RangeDiv> 
-                    <Range type="range" min="1" max="10" id="myinput1"></Range>
+                    <Slider minVal = "1" maxVal = "10" idVal = "myinput1"></Slider>
                     </RangeDiv>
                     </MainDiv>      
                     
@@ -182,7 +183,7 @@ export default function Play(){
                         </TableMain>
                     </TableDiv>
                     <RangeDiv> 
-                    <Range type="range" min="1" max="10" id="myinput1"></Range>
+                    <Range type="range" min="1" max="10" id="myinput2"></Range>
                     </RangeDiv>
                     </MainDiv>
 
