@@ -158,7 +158,7 @@ export default function Play(){
                         </TableMain>
                     </TableDiv>
                     <RangeDiv> 
-                    <Slider minVal = "1" maxVal = "10" idVal = "myinput1"></Slider>
+                    <Slider minVal = {1} maxVal = {10} idVal = "myinput1"></Slider>
                     </RangeDiv>
                     </MainDiv>      
                     
