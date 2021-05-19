@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import {PMButton} from '../components/PlusMinusButton';
 import {Slider} from '../components/Slider';
 
+
 //const [speedVal, setSpeedVal] = useState("");
 type PlusMinus = {
   plusSign: boolean;
@@ -118,8 +119,7 @@ export default function Play(){
     
     display: flex;
     justify-content: center; /*Центрирование по горизонтали*/
-    align-items: center;     /*Центрирование по вертикали */
-    
+    align-items: center;     /*Центрирование по вертикали */  
  `
 
   const StartButton = styled.button`
@@ -183,7 +183,8 @@ export default function Play(){
                         </TableMain>
                     </TableDiv>
                     <RangeDiv> 
-                    <Range type="range" min="1" max="10" id="myinput2"></Range>
+                    {/* <Range type="range" min="1" max="10" id="myinput2"></Range> */}
+                    <Slider minVal = {1} maxVal = {10} idVal = "myinput2"></Slider>
                     </RangeDiv>
                     </MainDiv>
 
@@ -226,7 +227,8 @@ export default function Play(){
                         </TableMain>
                     </TableDiv>
                     <RangeDiv> 
-                    <Range type="range" min="1" max="8"></Range>
+                    {/* <Range type="range" min="1" max="8"></Range> */}
+                    <Slider minVal = {1} maxVal = {8} idVal = "myinput3"></Slider>
                     </RangeDiv>
                   </MainDiv>
 
@@ -249,7 +251,8 @@ export default function Play(){
                         </TableMain>
                     </TableDiv>
                     <RangeDiv> 
-                    <Range type="range" min="1" max="8"></Range>
+                    {/* <Range type="range" min="1" max="8"></Range> */}
+                    <Slider minVal = {1} maxVal = {10} idVal = "myinput4"></Slider>
                     </RangeDiv>
                   </MainDiv>
                   <SecondnDiv>

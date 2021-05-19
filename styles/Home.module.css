@@ -113,6 +113,32 @@
   margin-left: 0.5rem;
 }
 
+.slider{
+  height: 7px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  background: url('../public/thumb2.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  background: url('../public/thumb2.png');
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
