@@ -139,6 +139,34 @@
   cursor: pointer;
 }
 
+#wrapper {
+  width:350px;
+  text-align:center;        
+  margin:0 auto;
+}
+
+#left {
+  float:left;
+  width:100px;
+  height: 100px;
+  background: #888;
+}
+
+#center {
+  display: inline-block;
+  margin:0 auto;
+  width:100px;
+  height: 100px;
+  background: #888;
+}
+
+#right {
+  float:right;
+  width:100px;
+  height: 100px;
+  background: #888;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
