@@ -304,7 +304,7 @@ width:100px;
                     </TableDiv>
                     <RangeDiv> 
                     {/* <Range type="range" min="1" max="8"></Range> */}
-                    <Slider minVal = {1} maxVal = {10} idVal = "myinput4"></Slider>
+                    <Slider minVal = {1} maxVal = {8} idVal = "myinput4"></Slider>
                     </RangeDiv>
                   </MainDiv>
                   <SecondnDiv>

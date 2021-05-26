@@ -1,9 +1,5 @@
 import React, {useEffect, useState, FunctionComponent} from 'react';
 import styled from '@emotion/styled';
-import { type } from 'os';
-
-
-
 
 const SButton = styled.button`
     background-color: yellow;
@@ -15,17 +11,29 @@ const SButton = styled.button`
   `
   const changeDivCenter = (widthDiv, buttonWords) => {
     //здесь определим переменную количество слов
+    const countWords: number = Number((document.getElementById("myinput1") as HTMLInputElement).value);
+    console.log('countWords = ' + countWords);
     //здесь определим переменную стартовое расстояние
+    let startDistance: number = Number((document.getElementById("myinput3") as HTMLInputElement).value);
+    startDistance = startDistance * 5;
+    console.log('startDistance = ' + startDistance);
     //здесь определим переменную сколько букв в словах
+    let countLetters: number = Number((document.getElementById("myinput2") as HTMLInputElement).value);
+    countLetters = countLetters + 2;
+    console.log('countLetters = ' + countLetters);
     //здесь определим переменную увеличение расстояния
+    let riseDistance: number = Number((document.getElementById("myinput4") as HTMLInputElement).value);
+    riseDistance = riseDistance * 5;
+    console.log('riseDistance = ' + riseDistance);
     //здесь определим переменную скорость сек
-
+    const speed: number = Number((document.getElementById("inputSpeed") as HTMLInputElement).value);
+    console.log('speed = ' + speed);
     
     //console.log(JSON.stringify(buttonWords));    
     const wordArray = buttonWords.words;
     //console.log(wordArray[0].word);
     for(let i = 0; i < wordArray.length; i++){
-        console.log(wordArray[i].word);
+       // console.log(wordArray[i].word);
         //здесь загоняем в массив по длине слов
     }
    
