@@ -4,9 +4,23 @@ import styled from '@emotion/styled'
 import {PMButton} from '../components/PlusMinusButton';
 import {Slider} from '../components/Slider';
 import {StartButton} from '../components/StartButton';
-//import {DivCenter} from '../components/DivCenter';
+import fs from 'fs/promises';
+import path from 'path';
 
+export async function getStaticProps(){
+  //const filePath = path.join(process.cwd(), 'data', 'dummy-backend.json');
+  const filePath = path.join(process.cwd(), 'data', 'basa.json');
+  const jsonData = await fs.readFile(filePath);
+  //const data = await fs.readFile(filePath);
+  const data = JSON.parse(jsonData.toString('utf8'));
 
+  return {props: {
+    words: data.words
+  }
+};
+}
+
+/*
 type PlusMinus = {
   plusSign: boolean;
 }
@@ -23,9 +37,11 @@ const clickPlusButton = () => {
     let speed = (document.getElementById("inputSpeed") as HTMLInputElement).value;
     console.log('speed: ' + speed);
 };
+*/
 
-export default function Play(){
-
+export default function Play(props){
+  //const {words} = props;
+  //console.log(words);
 
     const H1 = styled.h1`
     text-align:center;
@@ -292,7 +308,7 @@ width:100px;
                     </RangeDiv>
                   </MainDiv>
                   <SecondnDiv>
-                  <StartButton>
+                  <StartButton words = {props}>
                     
                   </StartButton>
                   </SecondnDiv>
