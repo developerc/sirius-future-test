@@ -19,3 +19,5 @@ http://localhost:3000
 //получим стартовую страницу
 //устанавливаем emotion/styled
 npm i @emotion/styled @emotion/react
+//установим модуль node
+npm i @types/node

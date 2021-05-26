@@ -3,9 +3,10 @@ import styled from '@emotion/styled'
 //import PlusMinusButton from '../src/PlusMinusButton';
 import {PMButton} from '../components/PlusMinusButton';
 import {Slider} from '../components/Slider';
+import {StartButton} from '../components/StartButton';
+//import {DivCenter} from '../components/DivCenter';
 
 
-//const [speedVal, setSpeedVal] = useState("");
 type PlusMinus = {
   plusSign: boolean;
 }
@@ -121,7 +122,7 @@ export default function Play(){
     justify-content: center; /*Центрирование по горизонтали*/
     align-items: center;     /*Центрирование по вертикали */  
  `
-
+/*
   const StartButton = styled.button`
     background-color: yellow;
     font-weight: bold;
@@ -130,7 +131,42 @@ export default function Play(){
     width: 200px;
     border-radius: 25px 25px 25px 25px;
   `
+  */
+  const DivWrapper = styled.div`
+  background: yellow;
+  width: %100;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  `
+  const DivLeft = styled.div`
+  width:370px;
+  height:150px;
+  float:left;
+  background-color:pink;
+  text-align: right;
+  margin-top: 20px;
+  `
  
+const DivCenter = styled.div`
+width:100px;
+  height:150px;
+  float:left;
+  background-color:blue;
+  margin-top: 20px;
+`
+
+ const DivRight = styled.div`
+ width:370px;
+  height:150px;
+  float:left;
+  background-color:purple;
+  margin-top: 20px;
+ `
+
      return (
          <>
          <H1>Тренажер "Поле зрения"</H1>                 
@@ -256,13 +292,20 @@ export default function Play(){
                     </RangeDiv>
                   </MainDiv>
                   <SecondnDiv>
-                  <StartButton onClick={clickStartButton}>
-                    СТАРТ
+                  <StartButton>
+                    
                   </StartButton>
                   </SecondnDiv>
                 </Half>
             </Container>
+            
         </div>
+            <DivWrapper>
+              <DivLeft id = "leftDiv">A</DivLeft>
+              <DivCenter  id = "centerDiv"> </DivCenter>
+              <DivRight id = "rightDiv">C</DivRight>
+            </DivWrapper>
+
          </>
      );
     
