@@ -1,6 +1,5 @@
-import React, {useEffect, useState, FunctionComponent} from 'react';
+import React from 'react';
 import styled from '@emotion/styled'
-//import PlusMinusButton from '../src/PlusMinusButton';
 import {PMButton} from '../components/PlusMinusButton';
 import {Slider} from '../components/Slider';
 import {StartButton} from '../components/StartButton';
@@ -8,10 +7,8 @@ import fs from 'fs/promises';
 import path from 'path';
 
 export async function getStaticProps(){
-  //const filePath = path.join(process.cwd(), 'data', 'dummy-backend.json');
   const filePath = path.join(process.cwd(), 'data', 'basa.json');
   const jsonData = await fs.readFile(filePath);
-  //const data = await fs.readFile(filePath);
   const data = JSON.parse(jsonData.toString('utf8'));
 
   return {props: {
@@ -20,28 +17,7 @@ export async function getStaticProps(){
 };
 }
 
-/*
-type PlusMinus = {
-  plusSign: boolean;
-}
-
-  const clickStartButton = () => {
-    console.log('click Start button!');
-    alert('Click start button!');
-  };
-
-const clickPlusButton = () => {
-  
-    alert('Click plus button!');
-    
-    let speed = (document.getElementById("inputSpeed") as HTMLInputElement).value;
-    console.log('speed: ' + speed);
-};
-*/
-
 export default function Play(props){
-  //const {words} = props;
-  //console.log(words);
 
     const H1 = styled.h1`
     text-align:center;
@@ -110,19 +86,7 @@ export default function Play(props){
     type: "text";
     border-radius: 7px 7px 7px 7px;
    `
-  /* 
-   const PlusMinusButton = styled.button`
-    padding: 5px;
-    color: black;
-    background-color: yellow;
-    font-weight: bold;
-    font-size: 30px;
-    border-radius: 7px 7px 7px 7px;
-    height:40px;
-    width: 40px;
-    line-height: 10px;
-   `
-  */
+  
    const ButtonDiv = styled.div`
    display: flex;
    justify-content: center;
@@ -138,31 +102,23 @@ export default function Play(props){
     justify-content: center; /*Центрирование по горизонтали*/
     align-items: center;     /*Центрирование по вертикали */  
  `
-/*
-  const StartButton = styled.button`
-    background-color: yellow;
-    font-weight: bold;
-    font-size: 25px;
-    height:50px;
-    width: 200px;
-    border-radius: 25px 25px 25px 25px;
-  `
-  */
+
   const DivWrapper = styled.div`
-  background: yellow;
+  background: white;
   width: %100;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  
+  font-weight: bold;
+  font-size: 50px;
   `
   const DivLeft = styled.div`
   width:370px;
   height:150px;
   float:left;
-  background-color:pink;
+  background-color: white;
   text-align: right;
   margin-top: 20px;
   `
@@ -171,7 +127,7 @@ const DivCenter = styled.div`
 width:100px;
   height:150px;
   float:left;
-  background-color:blue;
+  background-color: white;
   margin-top: 20px;
 `
 
@@ -179,7 +135,7 @@ width:100px;
  width:370px;
   height:150px;
   float:left;
-  background-color:purple;
+  background-color: white;
   margin-top: 20px;
  `
 
@@ -234,8 +190,7 @@ width:100px;
                             </tr>
                         </TableMain>
                     </TableDiv>
-                    <RangeDiv> 
-                    {/* <Range type="range" min="1" max="10" id="myinput2"></Range> */}
+                    <RangeDiv>                    
                     <Slider minVal = {1} maxVal = {10} idVal = "myinput2"></Slider>
                     </RangeDiv>
                     </MainDiv>
@@ -278,8 +233,7 @@ width:100px;
                             </tr>
                         </TableMain>
                     </TableDiv>
-                    <RangeDiv> 
-                    {/* <Range type="range" min="1" max="8"></Range> */}
+                    <RangeDiv>                     
                     <Slider minVal = {1} maxVal = {8} idVal = "myinput3"></Slider>
                     </RangeDiv>
                   </MainDiv>
@@ -302,8 +256,7 @@ width:100px;
                             </tr>
                         </TableMain>
                     </TableDiv>
-                    <RangeDiv> 
-                    {/* <Range type="range" min="1" max="8"></Range> */}
+                    <RangeDiv>                   
                     <Slider minVal = {1} maxVal = {8} idVal = "myinput4"></Slider>
                     </RangeDiv>
                   </MainDiv>
@@ -317,9 +270,9 @@ width:100px;
             
         </div>
             <DivWrapper>
-              <DivLeft id = "leftDiv">A</DivLeft>
+              <DivLeft id = "leftDiv">нач</DivLeft>
               <DivCenter  id = "centerDiv"> </DivCenter>
-              <DivRight id = "rightDiv">C</DivRight>
+              <DivRight id = "rightDiv">ало</DivRight>
             </DivWrapper>
 
          </>
